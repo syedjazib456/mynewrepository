@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="jquery-ui-1.13.2.custom/jquery-ui.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Project</title>
+    <style>
+
+      #container{
+
+        border: 2px ridge rgb(121, 181, 66);
+        margin:auto;
+        width: 700px;
+        height:600px;
+      }
+      h2{
+        text-align: center;
+        color:rgb(121, 181, 66);
+      }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>To Do List</h2>
+        <div id="projects">
+            <ul id="main">
+                <li><a href="personal">Personal</a></li>
+                <li><a href="work">Work</a></li>
+            </ul>
+            <ol id="personal">
+                <li><input type="checkbox">Call the Plumber</li>
+                <li><input type="checkbox">Purchase Grocery items</li>
+                <li><input type="checkbox">Clean the Room</li>
+            </ol>
+            <ol id="work">
+                <li><input type="checkbox">Complete the Project</li>
+                <li><input type="checkbox">Maintain Student Sheets</li>
+                <li><input type="checkbox">Prepared Marksheets</li>
+            </ol>
+        </div>
+    </div>
+    <script>
+
+        $(document).ready(function(){
+            $("#projects").tabs();
+            $("ul").sortable({axis:"x", containment:""});
+            $("ol").sortable();
+        });
+    </script>
+</body>
+</html>

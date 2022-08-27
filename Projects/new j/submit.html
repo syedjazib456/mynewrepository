@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Submit - Change and Select</title>
+</head>
+<body>
+    <form id="myform">
+    <label>First Name</label>
+    <input type="text" required placeholder="Enter Your First name" id="txt1">
+    <label>Last Name</label>
+    <input type="text" required placeholder="Enter Your Last name " id="txt2">
+    <input type="submit">
+</form>
+    <h1 id="head1"></h1>
+    <script>
+        $(document).ready(function(){
+
+            $("#myform").submit(function(event){
+                event.preventDefault();
+                var item1 = $("#txt1").val();
+                var item2 = $("#txt2").val();
+                 $("#head1").text("Your name is : " + item1 + " " + item2);
+            });
+        });
+    </script>
+</body>
+</html>

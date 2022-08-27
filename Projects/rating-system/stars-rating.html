@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fontawesome-free-6.1.2-web/css/all.min.css" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <title>Rating</title>
+    <style>
+
+        .container{
+            width: 400px;
+            height:500px;
+            margin: 50px auto;
+        }
+        li{
+            display: inline-block;
+            font-size: 35px;
+            color:#CCC;
+        }
+        .message{
+            margin-left: 55px;
+            font-size: 25px;
+        }
+        .hover-stars{
+            color: yellow;
+        }
+        .click-stars{
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li><i class="fa fa-star fa-fw"></i></li>
+            <li><i class="fa fa-star fa-fw"></i></li>
+            <li><i class="fa fa-star fa-fw"></i></li>
+            <li><i class="fa fa-star fa-fw"></i></li>
+            <li><i class="fa fa-star fa-fw"></i></li>
+            <li><i class="fa fa-star fa-fw"></i></li>
+        </ul>
+        <div class="message">Please Rate your Overall experience</div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("li").mouseover(function(){
+                var current = $(this);
+            
+                $("li").each(function(index){
+                    $(this).addClass("hover-stars");
+                    if(index == current.index()){
+                        return false;
+                    }
+                });
+            });
+            $("li").mouseleave(function(){
+                $("li").removeClass("hover-stars");
+            });
+            $("li").click(function(){
+                $("li").removeClass("click-stars");
+                $(".hover-stars").addClass("click-stars");
+                $(".message").html(("Thanks for Rating this")+
+                $(".click-stars").length + "stars..."
+                );
+            });
+        
+        });
+    </script>
+</body>
+</html>
