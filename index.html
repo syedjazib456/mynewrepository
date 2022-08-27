@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title>
+    <style>
+
+        p:first-line{
+            font-size: 34px;
+            color: aquamarine;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p:first-child{
+            background-color: blue;
+            color: bisque;
+        }
+        p::after{
+            content: "End";
+        }
+        p::before{
+            content: "Start";
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque incidunt excepturi deleniti cumque et voluptates ipsa velit mollitia eius, accusamus odio placeat molestiae veniam dolorum dicta optio voluptatum eveniet ratione.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam labore culpa cumque sunt totam eaque ad cupiditate, aliquam obcaecati debitis ipsa animi. Cum, minima culpa. Voluptate, ex. Rem, ullam praesentium?
+    Iure doloremque, cupiditate, tempora numquam minima ab ipsum sit adipisci voluptas explicabo natus esse corrupti expedita illum, ea fugiat. Tempora fugit facere quos dicta pariatur quia eos, aut commodi quas?
+    Harum exercitationem qui illo ipsam quisquam? Delectus, ullam! Sunt nemo molestiae dicta autem laborum! Deserunt numquam sint alias, ratione odio nemo facere deleniti voluptatum blanditiis quas officiis totam, dolor in!</p>
+    <p>My First Paragraph</p>
+    <p>My Second Paragraph</p>
+</body>
+</html>
